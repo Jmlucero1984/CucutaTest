@@ -87,6 +87,8 @@ And then unzip the package:
 
 ## Usage
 
+### Duplicate the provided ExmpleTest, rename it and edit the tests inside maintaining the functional structure and taking care of the name class inside the code and its associate tag (but it would be better if you follow the next proposed approach)
+
 ### Create a new Test file
 
 1. Add a new script object inside CucutaTest folder, name it, and double-click it in order to edit it on your actual code editor (i.e VSCODE)
@@ -110,7 +112,7 @@ export class MyNewTest extends CucutaTestBase {
         return [testResult, testResult ? successful : failed]
  }
  ```
-4. The optional CustomMeshData you'll return as result corresponds to a graphical information obtained from a inherited funtion called "sendGraphics" in case you were willing to inspect something visually
+4. The optional CustomMeshData object you'll return as result corresponds to a graphical information obtained from a inherited function called "sendGraphics" in case you were willing to inspect something visually.
    
 ```ts
 public sendGraphics(graphics: Graphics): CustomMeshData {
@@ -118,9 +120,9 @@ public sendGraphics(graphics: Graphics): CustomMeshData {
         return new CustomMeshData(md[0].indexCount, md[0].vertexCount, md[0].floatStride, md[0].vData, md[0].iData, md[0].indexStart)
     }
  ```
-You can pass it a Graphic instance (splines, lines, circles, etc) and it will return object to send it to the canvas in the CucutaTest panel
+You can pass it a Graphic instance (splines, lines, circles, etc) and it will return and object to send it to the HTMLCanvas in the CucutaTest panel
 
-5. Once yo have all your tests defined, in the Editor, drag your test script file and drop ip into the slot. Then from the drop down list select it and Run!
+5. Once yo have all your tests defined, in the Editor, drag your test script file and drop ip into the slot at the top of the CucutaTest panel. Then from the drop down list, select it and Run!
  
 
 ## Dependencies
