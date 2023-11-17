@@ -69,44 +69,58 @@ Engine: Cocos Creator ⬆️3.7
  
 ### Download from git repository
 
-Click [here](https://github.com/Jmlucero1984/CucutaTest) or go to the release panel, download the latest version package of this extension.
-
 And then unzip the package:
 
-- Windows: Unzip to `C:\Users\${your username}\.CocosCreator\packages\` }
-For example, on my Windows computer...
-
-
-
-## Usage
-
-### Search and open scene/prefab
-
-1. Press the hotkey (The default is `F1`) or click on *Extension -> Quick Finder -> Search* option to open the search bar.
-
-2. Enter the keyword then you'll get a list of results.
-
-3. Scroll the mouse wheel to scroll through the list; press the `Up Arrow` or `Down Arrow` to select file; press the `Left Arrow` or `Right Arrow` to locate the current selected file in Assets Panel.
-
-4. Find and select your target file, click on it or press `Enter` to open it.
-
-And then, click on anywhere outside the search bar or press `ESC` to close the search bar.
-
-```ts
-import { L10nManager } from 'db://localization-editor/l10n'
-
-```
-
+- Windows: put the zip file into "extensions" folder.
+* If you don't see the extensions folder, dont worry, place it wherever you want in your drive.
+- In the Cocos project, go to Extension -> Extension Manager
+- On the left, at the top, find the "Import Extension File(.zip) icon", smash it.
+- Then go to your zip file
+- It will take a while... that's ok.
 
 ### Setting
 
-Click on *Extension -> Quick Finder -> Setting* option to open the setting panel.
+- In order to work with your first tests, go to your project folder -> extensions -> cucutatest -> dist and copy the "Test" folder
+- Paste it preferably in a "Scripts" folder inside de "Assets" if you have it.
+- Now in Coco's Assets Inspector you'll see the CucutaTestBase to inherint from and a basic example.
+  
 
-In the setting panel, you can choose a hotkey(shortcut, for opening the search bar quickly) in preset list, or customize one by yourself.
+## Usage
 
-One thing you should know, not every keys/keys-combinations can be used, because some keys/keys-combinations have been used by the system or Cocos Creator.
+### Create a new Test file
 
-*Accelerator reference: [https://www.electronjs.org/docs/api/accelerator](https://www.electronjs.org/docs/api/accelerator)*
+1. Add a new script object inside CucutaTest folder, name it, and double-click it in order to edit it on your actual code editor (i.e VSCODE)
+
+2. Make it inherits from the base class CucutaTestBase
+ 
+```ts
+@ccclass('MyNewTest')
+export class MyNewTest extends CucutaTestBase {
+
+```
+
+3. Now you should implement this code template
+```ts
+/*The method name must ends with '_test' or '_Test' */
+ whatever_name_you_whish_but_must_ends_with_the_word_Test(): [boolean, string, CustomMeshData?] {
+        let successful = ""  // Message to shown in fase of success
+        let failed = ""      // Message to shown in case of failed test
+ 
+        let testResult = true // Any boolean condition you wanna make an assertion on
+        return [testResult, testResult ? successful : failed]
+ }
+ ```
+4. The optional CustomMeshData you'll return as result corresponds to a graphical information obtained from a inherited funtion called "sendGraphics" in case you were willing to inspect something visually
+   
+```ts
+public sendGraphics(graphics: Graphics): CustomMeshData {
+        let md: MeshRenderData[] = graphics.impl.getRenderDataList()
+        return new CustomMeshData(md[0].indexCount, md[0].vertexCount, md[0].floatStride, md[0].vData, md[0].iData, md[0].indexStart)
+    }
+ ```
+You can pass it a Graphic instance (splines, lines, circles, etc) and it will return object to send it to the canvas in the CucutaTest panel
+
+5. Once yo have all your tests defined, in the Editor, drag your test script file and drop ip into the slot. Then from the drop down list select it and Run!
  
 
 ## Dependencies
