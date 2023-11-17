@@ -1,0 +1,11 @@
+{
+  "name": "TestingExample",
+  "uuid": "46c58c07-f4e7-4b12-b47f-2bfe67e782e3",
+  "creator": {
+    "version": "3.7.3",
+    "registry": {
+      "remote": {}
+    },
+    "dependencies": {}
+  }
+}
