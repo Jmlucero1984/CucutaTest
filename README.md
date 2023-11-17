@@ -91,7 +91,8 @@ https://github.com/Jmlucero1984/CucutaTest/assets/91501518/898bff83-842c-4da9-84
 
 ## Usage
 
-### Duplicate the provided ExmpleTest, rename it and edit the tests inside maintaining the functional structure and taking care of the name class inside the code and its associate tag (but it would be better if you follow the next proposed approach)
+### Fastest way
+Duplicate the provided ExmpleTest, rename it and edit the tests inside maintaining the functional structure and taking care of the name class inside the code and its associated tag (but it would be better if you follow the next proposed approach)
 
 
 
