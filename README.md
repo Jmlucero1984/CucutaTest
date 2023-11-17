@@ -54,15 +54,14 @@ If you like this project, don't forget to star ⭐ https://github.com/Jmlucero19
  
 ![code-example](https://github.com/Jmlucero1984/CucutaTest/blob/main/ScreenShot_02.JPG)
 
-
-
+ 
 ## Environment
 
 Platform: Windows
 
 Engine: Cocos Creator ⬆️3.7
 
-
+---
 
 ## Download & Installation
 
@@ -83,11 +82,18 @@ And then unzip the package:
 - In order to work with your first tests, go to your project folder -> extensions -> cucutatest -> dist and copy the "Test" folder
 - Paste it preferably in a "Scripts" folder inside de "Assets" if you have it.
 - Now in Coco's Assets Inspector you'll see the CucutaTestBase to inherint from and a basic example.
+
   
+
+https://github.com/Jmlucero1984/CucutaTest/assets/91501518/898bff83-842c-4da9-8403-83674242c467
+
+
 
 ## Usage
 
 ### Duplicate the provided ExmpleTest, rename it and edit the tests inside maintaining the functional structure and taking care of the name class inside the code and its associate tag (but it would be better if you follow the next proposed approach)
+
+
 
 ### Create a new Test file
 
@@ -123,7 +129,12 @@ public sendGraphics(graphics: Graphics): CustomMeshData {
 You can pass it a Graphic instance (splines, lines, circles, etc) and it will return and object to send it to the HTMLCanvas in the CucutaTest panel
 
 5. Once yo have all your tests defined, in the Editor, drag your test script file and drop ip into the slot at the top of the CucutaTest panel. Then from the drop down list, select it and Run!
+
  
+
+https://github.com/Jmlucero1984/CucutaTest/assets/91501518/55096c92-aa22-4ea5-9778-9acc494970ac
+
+
 
 ## Dependencies
 
