@@ -44,7 +44,7 @@ Whereas this satisfies the original intentions, there's still work to do.
 
 This extension is an open source project, here is the git repository: [https://github.com/Jmlucero1984/CucutaTest](https://github.com/Jmlucero1984/CucutaTest)
 
-If you like this project, don't forget to star ⭐ (https://github.com/Jmlucero1984/CucutaTest/stargazers)!
+If you like this project, don't forget to star ⭐ [https://github.com/Jmlucero1984/CucutaTest/stargazers]!
 
  
 ## Screenshots
